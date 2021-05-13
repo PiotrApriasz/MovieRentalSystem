@@ -62,7 +62,7 @@ namespace MovieRentalSystemWPF
 
                         //MessageBox.Show("Worker found!");
 
-                        MainWindow window = new MainWindow(name, surname);
+                        MainWindow window = new MainWindow(Connector, name, surname);
                         window.Show();
                         Close();
                     }

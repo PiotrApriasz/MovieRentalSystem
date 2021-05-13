@@ -49,10 +49,10 @@
                  Grid.Row="1" Grid.RowSpan="3" Margin="0,2,0,0">
             <Button Name="StartPageButton"
                     Height="35"
-                    FontFamily="Century Gothic" FontSize="14" Content="Start Page" Width="146"/>
+                    FontFamily="Century Gothic" FontSize="14" Content="Start Page" Width="146" Click="StartPageButton_Click"/>
             <Button x:Name="RentMovieButton"
                 Height="35"
-                FontFamily="Century Gothic" FontSize="14" Content="Rent Movie" Width="146"/>
+                FontFamily="Century Gothic" FontSize="14" Content="Rent Movie" Width="146" Click="RentMovieButton_Click"/>
             <Button x:Name="DeleteRentalButton"
                 Height="35"
                 FontFamily="Century Gothic" FontSize="14" Content="Delete Rental" Width="146"/>

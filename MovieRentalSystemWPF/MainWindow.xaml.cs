@@ -11,7 +11,11 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MovieRentalSystemDataBase;
+using MovieRentalSystemDataBase.Procedures;
+using MovieRentalSystemWPF.Procedures;
 
 namespace MovieRentalSystemWPF
 {
@@ -22,18 +26,33 @@ namespace MovieRentalSystemWPF
     {
         public string Name { get; set; }
         public string Surname { get; set; }
+        public DBConnector Connector { get; set; }
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        public MainWindow(string name, string surname) : this()
+        public MainWindow(DBConnector connector, string name, string surname) : this()
         {
             Name = name;
             Surname = surname;
             WorkerInfoTextBlock.Text = $"{Name} {Surname}";
             MainPage mainPage = new MainPage();
+            Connector = connector;
             MainFrame.Navigate(mainPage);
+            MainFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
+        }
+
+        private void StartPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            MainFrame.Navigate(mainPage);
+        }
+
+        private void RentMovieButton_Click(object sender, RoutedEventArgs e)
+        {
+            RentMoviePage rentMovie = new RentMoviePage(Connector);
+            MainFrame.Navigate(rentMovie);
         }
     }
 }
