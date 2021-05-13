@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieRentalSystemWPF"
         mc:Ignorable="d"
-        Title="MovieRentalSystem" Height="550" Width="800"
+        Title="MovieRentalSystem" Height="600" Width="900"
         WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="168*"></ColumnDefinition>
-            <ColumnDefinition Width="232*"></ColumnDefinition>
-            <ColumnDefinition Width="339*"></ColumnDefinition>
-            <ColumnDefinition Width="61*"></ColumnDefinition>
+            <ColumnDefinition Width="184*"></ColumnDefinition>
+            <ColumnDefinition Width="266*"></ColumnDefinition>
+            <ColumnDefinition Width="381*"></ColumnDefinition>
+            <ColumnDefinition Width="69*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="57*"></RowDefinition>
@@ -21,15 +21,15 @@
             <RowDefinition Height="131*"></RowDefinition>
         </Grid.RowDefinitions>
         <Line Grid.Row="1"  Grid.ColumnSpan="4"
-            X1="800" Y1="0"
+            X1="900" Y1="0"
             Stroke="Black"
-            StrokeThickness="4" />
+            StrokeThickness="4" Margin="0,0,0,170" Grid.RowSpan="2" />
         <Line Grid.Row="0"  Grid.ColumnSpan="4"
-              X1="800" Y1="0"
+              X1="900" Y1="0"
               Stroke="Black"
               StrokeThickness="4" Margin="0,0,0,155" Grid.RowSpan="2" />
         <Line Grid.RowSpan="4" Grid.Column="1"
-               Y1="550"
+               Y1="600"
               Stroke="Black"
               StrokeThickness="4" />
 
@@ -45,5 +45,51 @@
                    TextWrapping="Wrap"/>
         <Frame Name="MainFrame"
             Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="3"></Frame>
+        <ListBox HorizontalContentAlignment="Center"
+                 Grid.Row="1" Grid.RowSpan="3" Margin="0,2,0,0">
+            <Button Name="StartPageButton"
+                    Height="35"
+                    FontFamily="Century Gothic" FontSize="14" Content="Start Page" Width="146"/>
+            <Button x:Name="RentMovieButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Rent Movie" Width="146"/>
+            <Button x:Name="DeleteRentalButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Delete Rental" Width="146"/>
+            <Button x:Name="AddUserButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Add User" Width="146"/>
+            <Button x:Name="DeleteUserButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Delete User" Width="146"/>
+            <Button x:Name="AddMovieButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Add Movie" Width="146"/>
+            <Button x:Name="DeleteMovieButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Delete Movie" Width="146"/>
+            <Button x:Name="CheckDelaysMovieButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Check Delays" Width="146"/>
+            <Button x:Name="RentalsDetailsButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Rentals Details" Width="146"/>
+            <Button x:Name="GenresNumbersButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Genres Numbers" Width="146"/>
+            <Button x:Name="MoviesInformationsButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Movies Information" Width="146"/>
+            <Button x:Name="AccountsSummaryButton"
+                Height="35"
+                FontFamily="Century Gothic" FontSize="14" Content="Account Summary" Width="146"/>
+            <Button x:Name="UsersAgeButton"
+                    Height="35"
+                    FontFamily="Century Gothic" FontSize="14" Content="Users Age" Width="146"/>
+            <Button x:Name="UsersAndAdressessButton"
+                    Height="35"
+                    FontFamily="Century Gothic" FontSize="14" Content="Users Addressees" Width="146"/>
+
+        </ListBox>
     </Grid>
 </Window>
