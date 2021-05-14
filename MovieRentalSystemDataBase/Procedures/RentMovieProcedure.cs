@@ -4,13 +4,13 @@ using MySqlConnector;
 
 namespace MovieRentalSystemDataBase.Procedures
 {
-    public class RentMovieProcedure : Query
+    public class RentMovieProcedure : QueryMaker
     {
-        public string MovieTitle { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string CreditCardNumber { get; set; }
-        public string NumberCVV { get; set; }
+        private string MovieTitle { get; set; }
+        private string Name { get; set; }
+        private string Surname { get; set; }
+        private string CreditCardNumber { get; set; }
+        private string NumberCVV { get; set; }
 
         public RentMovieProcedure(DBConnector connector, string movieTitle,
             string name, string surname, string creditCard, string numberCvv) : base(connector)
@@ -23,50 +23,17 @@ namespace MovieRentalSystemDataBase.Procedures
             NumberCVV = numberCvv;
         }
 
-        public override void ExecuteQuery()
+        protected override DataTable SetQuery()
         {
-            if (Connector.OpenConnection())
-            {
-                try
-                {
-                    var cmd = new MySqlCommand(QueryText, Connector.Connection);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new MySqlParameter("movieTitle", MovieTitle));
-                    cmd.Parameters.Add(new MySqlParameter("Name", Name));
-                    cmd.Parameters.Add(new MySqlParameter("Surname", Surname));
-                    cmd.Parameters.Add(new MySqlParameter("CreditCardNumber", CreditCardNumber));
-                    cmd.Parameters.Add(new MySqlParameter("CVVNumber", NumberCVV));
-                    cmd.ExecuteNonQuery();
-                }
-                catch (MySqlException e)
-                {
-                    switch (e.Number)
-                    {
-                        case 1064:
-                            throw new("There is a syntax error in your query!");
-                        case 1054:
-                            throw new("Unknown column!");
-                        case 1146:
-                            throw new("Table you entered doesn't exists");
-                        case 1644:
-                            throw new(e.Message);
-                        default:
-                            throw new("Something is wrong with your query!");
-                    }
-                }
-                catch (InvalidOperationException)
-                {
-                    throw new("Something went wrong!");
-                }
-                finally
-                {
-                    Connector.CloseConnection();
-                }
-            }
-            else
-            {
-                throw new("Can't open connection with data base");
-            }
+            var cmd = new MySqlCommand(QueryText, Connector.Connection) {CommandType = CommandType.StoredProcedure};
+            cmd.Parameters.Add(new MySqlParameter("movieTitle", MovieTitle));
+            cmd.Parameters.Add(new MySqlParameter("Name", Name));
+            cmd.Parameters.Add(new MySqlParameter("Surname", Surname));
+            cmd.Parameters.Add(new MySqlParameter("CreditCardNumber", CreditCardNumber));
+            cmd.Parameters.Add(new MySqlParameter("CVVNumber", NumberCVV));
+            cmd.ExecuteNonQuery();
+
+            return null;
         }
     }
 }

@@ -48,11 +48,10 @@ namespace MovieRentalSystemWPF
             {
                 var select = new Select(Connector, "select * from workers where worker_id = " +
                                                    $"'{WorkerIdTextBox.Text}'");
-                DataTable worker = null;
 
                 try
                 {
-                    worker = select.ExecuteQuerySelect();
+                    var worker = select.ExecuteQuery();
 
                     if (worker.Rows.Count >0)
                     {
@@ -70,7 +69,6 @@ namespace MovieRentalSystemWPF
                     {
                         MessageBox.Show("Incorrect worker id!");
                     }
-                    
                 }
                 catch (Exception exception)
                 {
