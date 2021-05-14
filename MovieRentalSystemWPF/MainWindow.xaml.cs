@@ -54,5 +54,11 @@ namespace MovieRentalSystemWPF
             RentMoviePage rentMovie = new RentMoviePage(Connector);
             MainFrame.Navigate(rentMovie);
         }
+
+        private void DeleteRentalButton_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteRentalPage deleteRental = new DeleteRentalPage(Connector);
+            MainFrame.Navigate(deleteRental);
+        }
     }
 }

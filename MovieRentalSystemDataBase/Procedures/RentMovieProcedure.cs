@@ -31,9 +31,15 @@ namespace MovieRentalSystemDataBase.Procedures
             cmd.Parameters.Add(new MySqlParameter("Surname", Surname));
             cmd.Parameters.Add(new MySqlParameter("CreditCardNumber", CreditCardNumber));
             cmd.Parameters.Add(new MySqlParameter("CVVNumber", NumberCVV));
-            cmd.ExecuteNonQuery();
+            int affectedRows = cmd.ExecuteNonQuery();
 
-            return null;
+            var dt = new DataTable();
+            dt.Columns.Add("AffectedRows");
+            var row = dt.NewRow();
+            row["AffectedRows"] = affectedRows;
+            dt.Rows.Add(row);
+
+            return dt;
         }
     }
 }

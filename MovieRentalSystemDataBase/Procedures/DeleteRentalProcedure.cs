@@ -29,8 +29,15 @@ namespace MovieRentalSystemDataBase.Procedures
             cmd.Parameters.Add(new MySqlParameter("movieTitle", MovieTitle));
             cmd.Parameters.Add(new MySqlParameter("Name", Name));
             cmd.Parameters.Add(new MySqlParameter("Surname", Surname));
-            cmd.ExecuteNonQuery();
-            return null;
+            int affectedRows = cmd.ExecuteNonQuery();
+
+            var dt = new DataTable();
+            dt.Columns.Add("AffectedRows");
+            var row = dt.NewRow();
+            row["AffectedRows"] = affectedRows;
+            dt.Rows.Add(row);
+
+            return dt;
         }
     }
 }

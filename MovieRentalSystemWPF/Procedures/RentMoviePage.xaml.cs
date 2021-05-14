@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace MovieRentalSystemWPF.Procedures
     /// </summary>
     public partial class RentMoviePage : Page
     {
-        public DBConnector Connector { get; set; }
+        private DBConnector Connector { get; set; }
 
         public RentMoviePage()
         {
@@ -51,8 +52,14 @@ namespace MovieRentalSystemWPF.Procedures
 
                 try
                 {
-                    rentMovie.ExecuteQuery();
-                    MessageBox.Show("Successfully added rental!");
+                    var dt = rentMovie.ExecuteQuery();
+                    DataRow row = dt.Rows[0];
+
+                    if (int.Parse(row["AffectedRows"].ToString() ?? string.Empty) > 0)
+                    {
+                        MessageBox.Show("Successfully added rental!");
+                    }
+                    
                 }
                 catch (Exception exception)
                 {
