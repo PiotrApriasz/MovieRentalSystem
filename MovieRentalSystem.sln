@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieRentalSystemWPF", "MovieRentalSystemWPF\MovieRentalSystemWPF.csproj", "{82F6FA2D-7B63-40E7-829C-92414143C648}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRentalSystemDataBase", "MovieRentalSystemDataBase\MovieRentalSystemDataBase.csproj", "{A2937C09-1031-47C5-97A9-50BA75856B0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieRentalSystemDataBase", "MovieRentalSystemDataBase\MovieRentalSystemDataBase.csproj", "{A2937C09-1031-47C5-97A9-50BA75856B0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{3373EF25-0CEB-497F-874B-A9A6448B58E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A2937C09-1031-47C5-97A9-50BA75856B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2937C09-1031-47C5-97A9-50BA75856B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2937C09-1031-47C5-97A9-50BA75856B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3373EF25-0CEB-497F-874B-A9A6448B58E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3373EF25-0CEB-497F-874B-A9A6448B58E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3373EF25-0CEB-497F-874B-A9A6448B58E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3373EF25-0CEB-497F-874B-A9A6448B58E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
