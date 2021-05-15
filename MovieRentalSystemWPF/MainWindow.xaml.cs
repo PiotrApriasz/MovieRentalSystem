@@ -66,5 +66,11 @@ namespace MovieRentalSystemWPF
             AddUserPage addUser = new AddUserPage(Connector);
             MainFrame.Navigate(addUser);
         }
+
+        private void DeleteUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteUserPage deleteUser = new DeleteUserPage(Connector);
+            MainFrame.Navigate(deleteUser);
+        }
     }
 }

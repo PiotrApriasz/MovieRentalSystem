@@ -61,7 +61,7 @@
                 FontFamily="Century Gothic" FontSize="14" Content="Add User" Width="146" Click="AddUserButton_Click"/>
             <Button x:Name="DeleteUserButton"
                 Height="35"
-                FontFamily="Century Gothic" FontSize="14" Content="Delete User" Width="146"/>
+                FontFamily="Century Gothic" FontSize="14" Content="Delete User" Width="146" Click="DeleteUserButton_Click"/>
             <Button x:Name="AddMovieButton"
                 Height="35"
                 FontFamily="Century Gothic" FontSize="14" Content="Add Movie" Width="146"/>

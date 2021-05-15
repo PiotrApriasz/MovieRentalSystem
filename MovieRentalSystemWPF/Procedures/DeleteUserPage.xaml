@@ -1,0 +1,27 @@
+﻿<Page x:Class="MovieRentalSystemWPF.Procedures.DeleteUserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MovieRentalSystemWPF.Procedures"
+      mc:Ignorable="d" 
+      d:DesignHeight="543" d:DesignWidth="716"
+      Title="DeleteUserPage">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,88,0,0" Text="Enter client ID"
+                   TextWrapping="Wrap" VerticalAlignment="Top"
+                   FontSize="28" FontFamily="Century Gothic"/>
+        <TextBox Name="ClientIdBox"
+                 HorizontalAlignment="Center" Margin="0,155,0,0" Text=""
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="311"
+                 FontSize="21" FontFamily="Century Gothic"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,156,0,0" Text="User ID"
+                   TextWrapping="Wrap" VerticalAlignment="Top"
+                   FontSize="21" FontFamily="Century Gothic"/>
+        <Button Name="DeleteUserButton"
+                Content="Delete User" HorizontalAlignment="Center" Margin="0,382,0,0"
+                VerticalAlignment="Top" Height="35" Width="176"
+                FontSize="17" FontFamily="Century Gothic" Click="DeleteUserButton_Click"/>
+    </Grid>
+</Page>
