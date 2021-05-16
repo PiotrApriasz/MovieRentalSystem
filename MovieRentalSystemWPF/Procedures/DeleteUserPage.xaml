@@ -9,7 +9,7 @@
       Title="DeleteUserPage">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Center" Margin="0,88,0,0" Text="Enter client ID"
+        <TextBlock HorizontalAlignment="Center" Margin="0,88,0,0" Text="Enter user ID"
                    TextWrapping="Wrap" VerticalAlignment="Top"
                    FontSize="28" FontFamily="Century Gothic"/>
         <TextBox Name="ClientIdBox"
