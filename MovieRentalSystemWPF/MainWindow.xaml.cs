@@ -70,5 +70,11 @@ namespace MovieRentalSystemWPF
             ViewsPage viewsPage = new ViewsPage(Connector);
             MainFrame.Navigate(viewsPage);
         }
+
+        private void DeleteMovieButton_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteMoviePage deleteMovie = new DeleteMoviePage(Connector);
+            MainFrame.Navigate(deleteMovie);
+        }
     }
 }
