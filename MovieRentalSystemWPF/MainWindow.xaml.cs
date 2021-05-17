@@ -1,20 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
+﻿using System.Windows;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using MovieRentalSystemDataBase;
-using MovieRentalSystemDataBase.Procedures;
 using MovieRentalSystemWPF.Procedures;
 
 namespace MovieRentalSystemWPF
@@ -77,6 +63,12 @@ namespace MovieRentalSystemWPF
         {
             AddMoviePage addMovie = new AddMoviePage(Connector);
             MainFrame.Navigate(addMovie);
+        }
+
+        private void ViewsButton_Click(object sender, RoutedEventArgs e)
+        {
+            ViewsPage viewsPage = new ViewsPage(Connector);
+            MainFrame.Navigate(viewsPage);
         }
     }
 }
