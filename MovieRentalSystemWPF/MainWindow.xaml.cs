@@ -78,5 +78,11 @@ namespace MovieRentalSystemWPF
             AddMoviePage addMovie = new AddMoviePage(Connector);
             MainFrame.Navigate(addMovie);
         }
+
+        private void ViewsButton_Click(object sender, RoutedEventArgs e)
+        {
+            ViewsPage viewsPage = new ViewsPage(Connector);
+            MainFrame.Navigate(viewsPage);
+        }
     }
 }

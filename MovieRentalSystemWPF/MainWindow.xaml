@@ -71,24 +71,9 @@
             <Button x:Name="CheckDelaysMovieButton"
                 Height="35"
                 FontFamily="Century Gothic" FontSize="14" Content="Check Delays" Width="146"/>
-            <Button x:Name="RentalsDetailsButton"
+            <Button x:Name="ViewsButton"
                 Height="35"
-                FontFamily="Century Gothic" FontSize="14" Content="Rentals Details" Width="146" />
-            <Button x:Name="GenresNumbersButton"
-                Height="35"
-                FontFamily="Century Gothic" FontSize="14" Content="Genres Numbers" Width="146"/>
-            <Button x:Name="MoviesInformationsButton"
-                Height="35"
-                FontFamily="Century Gothic" FontSize="14" Content="Movies Information" Width="146"/>
-            <Button x:Name="AccountsSummaryButton"
-                Height="35"
-                FontFamily="Century Gothic" FontSize="14" Content="Account Summary" Width="146"/>
-            <Button x:Name="UsersAgeButton"
-                    Height="35"
-                    FontFamily="Century Gothic" FontSize="14" Content="Users Age" Width="146"/>
-            <Button x:Name="UsersAndAdressessButton"
-                    Height="35"
-                    FontFamily="Century Gothic" FontSize="14" Content="Users Addressees" Width="146"/>
+                FontFamily="Century Gothic" FontSize="14" Content="Views" Width="146" Click="ViewsButton_Click" />
 
         </ListBox>
     </Grid>

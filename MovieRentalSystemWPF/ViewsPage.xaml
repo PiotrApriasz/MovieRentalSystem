@@ -1,0 +1,27 @@
+﻿<Page x:Class="MovieRentalSystemWPF.ViewsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MovieRentalSystemWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="543" d:DesignWidth="716"
+      Title="ViewsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"></RowDefinition>
+            <RowDefinition Height="161*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="328" HorizontalContentAlignment="Center">
+            <ComboBoxItem IsSelected="True">Users</ComboBoxItem>
+            <ComboBoxItem>Addresses</ComboBoxItem>
+            <ComboBoxItem>Directors</ComboBoxItem>
+            <ComboBoxItem>Movie Genres</ComboBoxItem>
+            <ComboBoxItem>Movies</ComboBoxItem>
+            <ComboBoxItem>Rentals</ComboBoxItem>
+            <ComboBoxItem>Workers</ComboBoxItem>
+        </ComboBox>
+        <DataGrid Name="DataGrid" ItemsSource="{Binding}" Grid.Row="1"/>
+    </Grid>
+</Page>
