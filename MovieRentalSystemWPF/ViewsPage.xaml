@@ -13,8 +13,9 @@
             <RowDefinition Height="20*"></RowDefinition>
             <RowDefinition Height="161*"></RowDefinition>
         </Grid.RowDefinitions>
-        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="328" HorizontalContentAlignment="Center">
-            <ComboBoxItem IsSelected="True">Users</ComboBoxItem>
+        <ComboBox Name="ComboBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="328" HorizontalContentAlignment="Center"
+                  SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem >Users</ComboBoxItem>
             <ComboBoxItem>Addresses</ComboBoxItem>
             <ComboBoxItem>Directors</ComboBoxItem>
             <ComboBoxItem>Movie Genres</ComboBoxItem>
