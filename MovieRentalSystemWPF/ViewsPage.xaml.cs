@@ -1,18 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using MovieRentalSystemDataBase;
 using MovieRentalSystemDataBase.QueryTypes;
 
@@ -61,6 +49,24 @@ namespace MovieRentalSystemWPF
                     break;
                 case 6:
                     Query = "SELECT * FROM workers;";
+                    break;
+                case 7:
+                    Query = "SELECT * FROM a_detailed_list_of_rental;";
+                    break;
+                case 8:
+                    Query = "SELECT * FROM genres_count_by_movies;";
+                    break;
+                case 9:
+                    Query = "SELECT * FROM informations_about_films;";
+                    break;
+                case 10:
+                    Query = "SELECT * FROM user_account_summary;";
+                    break;
+                case 11:
+                    Query = "SELECT * FROM users_age;";
+                    break;
+                case 12:
+                    Query = "SELECT * FROM users_and_adresses;";
                     break;
             }
 

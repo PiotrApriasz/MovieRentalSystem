@@ -15,14 +15,20 @@
         </Grid.RowDefinitions>
         <ComboBox Name="ComboBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="328" HorizontalContentAlignment="Center"
                   SelectionChanged="ComboBox_SelectionChanged">
-            <ComboBoxItem >Users</ComboBoxItem>
+            <ComboBoxItem>Users</ComboBoxItem>
             <ComboBoxItem>Addresses</ComboBoxItem>
             <ComboBoxItem>Directors</ComboBoxItem>
             <ComboBoxItem>Movie Genres</ComboBoxItem>
             <ComboBoxItem>Movies</ComboBoxItem>
             <ComboBoxItem>Rentals</ComboBoxItem>
             <ComboBoxItem>Workers</ComboBoxItem>
+            <ComboBoxItem>Detailed Rentals</ComboBoxItem>
+            <ComboBoxItem>Genres Count By Movies</ComboBoxItem>
+            <ComboBoxItem>Information about films</ComboBoxItem>
+            <ComboBoxItem>User Account Summary</ComboBoxItem>
+            <ComboBoxItem>User Age</ComboBoxItem>
+            <ComboBoxItem>User Address</ComboBoxItem>
         </ComboBox>
-        <DataGrid Name="DataGrid" ItemsSource="{Binding}" Grid.Row="1"/>
+        <DataGrid Name="DataGrid" ItemsSource="{Binding}" Grid.Row="1" Margin="10,0,10,0"/>
     </Grid>
 </Page>
