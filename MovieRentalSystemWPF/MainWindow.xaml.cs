@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using MovieRentalSystemDataBase;
 using MovieRentalSystemDataBase.Procedures;
 using MovieRentalSystemWPF.Procedures;
+using MovieRentalSystemWPF.Views;
 
 namespace MovieRentalSystemWPF
 {
@@ -77,6 +78,12 @@ namespace MovieRentalSystemWPF
         {
             AddMoviePage addMovie = new AddMoviePage(Connector);
             MainFrame.Navigate(addMovie);
+        }
+
+        private void RentalsDetailsButton_Click(object sender, RoutedEventArgs e)
+        {
+            DetailedRentalsPage detailedRentals = new DetailedRentalsPage(Connector);
+            MainFrame.Navigate(detailedRentals);
         }
     }
 }

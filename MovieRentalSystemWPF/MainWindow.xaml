@@ -73,7 +73,7 @@
                 FontFamily="Century Gothic" FontSize="14" Content="Check Delays" Width="146"/>
             <Button x:Name="RentalsDetailsButton"
                 Height="35"
-                FontFamily="Century Gothic" FontSize="14" Content="Rentals Details" Width="146"/>
+                FontFamily="Century Gothic" FontSize="14" Content="Rentals Details" Width="146" Click="RentalsDetailsButton_Click"/>
             <Button x:Name="GenresNumbersButton"
                 Height="35"
                 FontFamily="Century Gothic" FontSize="14" Content="Genres Numbers" Width="146"/>
