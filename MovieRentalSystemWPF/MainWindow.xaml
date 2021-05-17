@@ -70,7 +70,7 @@
                 FontFamily="Century Gothic" FontSize="14" Content="Delete Movie" Width="146" Click="DeleteMovieButton_Click"/>
             <Button x:Name="CheckDelaysMovieButton"
                 Height="35"
-                FontFamily="Century Gothic" FontSize="14" Content="Check Delays" Width="146"/>
+                FontFamily="Century Gothic" FontSize="14" Content="Check Delays" Width="146" Click="CheckDelaysMovieButton_Click"/>
             <Button x:Name="ViewsButton"
                 Height="35"
                 FontFamily="Century Gothic" FontSize="14" Content="Views" Width="146" Click="ViewsButton_Click" />

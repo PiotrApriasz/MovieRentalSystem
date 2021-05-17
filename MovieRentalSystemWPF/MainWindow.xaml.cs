@@ -76,5 +76,11 @@ namespace MovieRentalSystemWPF
             DeleteMoviePage deleteMovie = new DeleteMoviePage(Connector);
             MainFrame.Navigate(deleteMovie);
         }
+
+        private void CheckDelaysMovieButton_Click(object sender, RoutedEventArgs e)
+        {
+            CheckDelaysPage checkDelays = new CheckDelaysPage(Connector);
+            MainFrame.Navigate(checkDelays);
+        }
     }
 }
